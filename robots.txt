@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aadityasp.github.io/blackjack-trainer/sitemap.xml

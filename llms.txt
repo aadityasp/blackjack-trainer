@@ -1,0 +1,120 @@
+# Blackjack Trainer: 21 Coach
+
+> A free iPhone app that teaches blackjack basic strategy through practice hands. It grades every decision against verified strategy tables and explains each miss. Practice only: No real money, no wagers, no payouts. No ads, no signup, works offline, collects no data.
+
+Site: https://aadityasp.github.io/blackjack-trainer/
+App Store: https://apps.apple.com/app/id6789853035
+
+## Strategy pages
+
+The pages below come from the same verified strategy tables the app uses. Each of the 360 hands has its own page with the correct play for both soft 17 rules, a plain-English reason, the numbers, and a short FAQ.
+
+- [Basic strategy overview](https://aadityasp.github.io/blackjack-trainer/strategy/): rules assumed, rules of thumb, and the hands players get wrong most.
+- [Chart, dealer hits soft 17 (H17)](https://aadityasp.github.io/blackjack-trainer/strategy/dealer-hits-soft-17/): hard totals, soft totals, and pairs, 4 to 8 decks.
+- [Chart, dealer stands on soft 17 (S17)](https://aadityasp.github.io/blackjack-trainer/strategy/dealer-stands-soft-17/): the same chart for the other rule.
+- [Hard 16 vs dealer 10](https://aadityasp.github.io/blackjack-trainer/strategy/hard-16-vs-10/): Surrender (hit if surrender is not offered).
+- [Hard 12 vs dealer 3](https://aadityasp.github.io/blackjack-trainer/strategy/hard-12-vs-3/): Hit.
+- [Hard 11 vs dealer ace](https://aadityasp.github.io/blackjack-trainer/strategy/hard-11-vs-ace/): Double down if the dealer hits soft 17, hit if it stands.
+- [Soft 18 vs dealer 9](https://aadityasp.github.io/blackjack-trainer/strategy/soft-18-vs-9/): Hit.
+- [Soft 19 vs dealer 6](https://aadityasp.github.io/blackjack-trainer/strategy/soft-19-vs-6/): Double down if the dealer hits soft 17, stand if it stands.
+- [Pair of 9s vs dealer 7](https://aadityasp.github.io/blackjack-trainer/strategy/pair-9s-vs-7/): Stand.
+- [Pair of 8s vs dealer ace](https://aadityasp.github.io/blackjack-trainer/strategy/pair-8s-vs-ace/): Surrender if the dealer hits soft 17, split if it stands.
+
+## Hand page URLs
+
+Every hand has a page at https://aadityasp.github.io/blackjack-trainer/strategy/{hand}-vs-{dealer}/. Examples: hard-16-vs-10, soft-18-vs-9, pair-8s-vs-ace, pair-aces-vs-6, pair-10s-vs-6. Dealer upcards are 2 through 10 and ace (10 covers jack, queen, and king). Hard totals run 5 to 21, soft totals 13 to 21, pairs from aces to 10s. All 360 URLs are in https://aadityasp.github.io/blackjack-trainer/sitemap.xml.
+
+## Rules assumed
+
+- 4, 6, or 8 decks (the chart is the same for all three)
+- The dealer checks for blackjack when showing a 10 or an ace, before you act
+- Double down is allowed on any first two cards
+- Double after split is allowed
+- Late surrender is offered, as your first decision only
+- Split up to four hands; split aces get one card each and cannot be resplit
+- Both soft 17 rules are covered: dealer hits soft 17 (H17) and dealer stands on soft 17 (S17).
+- One-deck and two-deck games, tables without surrender, and dealers who do not check for blackjack change some plays and are not covered.
+
+## Rules of thumb (true for both charts)
+
+- Always split aces.
+- Never split 10s. A pair of 10s is a 20, so stand.
+- Never split 5s. Treat them as a hard 10: double down against a dealer 2 through 9, otherwise hit.
+- Split 8s against a dealer 2 through 10. Against an ace, split when the dealer stands on soft 17, and surrender (or split if surrender is not offered) when the dealer hits soft 17.
+- Always hit hard 5 through 8.
+- Double down on hard 11 against a dealer 2 through 10. Against an ace, double down when the dealer hits soft 17, otherwise hit.
+- Stand on hard 13 through 16 against a dealer 2 through 6.
+- Hard 12 is the odd one: stand against a dealer 4, 5, or 6, and hit against everything else.
+- Always stand on hard 18 or more.
+- Always stand on soft 20 and soft 21.
+- Never stand on soft 17 or less. The ace means one more card cannot bust you.
+- Decline insurance. Insurance is a bad bet.
+
+## Plain-text chart, Dealer hits soft 17 (H17)
+
+Each line lists the play against each dealer upcard. "else" is what to do when the first move is not available (cannot double down, surrender not offered).
+
+Hard totals:
+- Hard 21: 2 through ace stand
+- Hard 20: 2 through ace stand
+- Hard 19: 2 through ace stand
+- Hard 18: 2 through ace stand
+- Hard 17: 2 through 10 stand; ace surrender (else stand)
+- Hard 16: 2 through 6 stand; 7 and 8 hit; 9 through ace surrender (else hit)
+- Hard 15: 2 through 6 stand; 7 through 9 hit; 10 and ace surrender (else hit)
+- Hard 14: 2 through 6 stand; 7 through ace hit
+- Hard 13: 2 through 6 stand; 7 through ace hit
+- Hard 12: 2 and 3 hit; 4 through 6 stand; 7 through ace hit
+- Hard 11: 2 through ace double down (else hit)
+- Hard 10: 2 through 9 double down (else hit); 10 and ace hit
+- Hard 9: 2 hit; 3 through 6 double down (else hit); 7 through ace hit
+- Hard 8: 2 through ace hit
+- Hard 7: 2 through ace hit
+- Hard 6: 2 through ace hit
+- Hard 5: 2 through ace hit
+
+Soft totals:
+- Soft 21: 2 through ace stand
+- Soft 20: 2 through ace stand
+- Soft 19: 2 through 5 stand; 6 double down (else stand); 7 through ace stand
+- Soft 18: 2 through 6 double down (else stand); 7 and 8 stand; 9 through ace hit
+- Soft 17: 2 hit; 3 through 6 double down (else hit); 7 through ace hit
+- Soft 16: 2 and 3 hit; 4 through 6 double down (else hit); 7 through ace hit
+- Soft 15: 2 and 3 hit; 4 through 6 double down (else hit); 7 through ace hit
+- Soft 14: 2 through 4 hit; 5 and 6 double down (else hit); 7 through ace hit
+- Soft 13: 2 through 4 hit; 5 and 6 double down (else hit); 7 through ace hit
+
+Pairs:
+- Pair of aces: 2 through ace split
+- Pair of 10s: 2 through ace stand
+- Pair of 9s: 2 through 6 split; 7 stand; 8 and 9 split; 10 and ace stand
+- Pair of 8s: 2 through 10 split; ace surrender (else split)
+- Pair of 7s: 2 through 7 split; 8 through ace hit
+- Pair of 6s: 2 split (hit if no double after split); 3 through 6 split; 7 through ace hit
+- Pair of 5s: 2 through 9 double down (else hit); 10 and ace hit
+- Pair of 4s: 2 through 4 hit; 5 and 6 split (hit if no double after split); 7 through ace hit
+- Pair of 3s: 2 and 3 split (hit if no double after split); 4 through 7 split; 8 through ace hit
+- Pair of 2s: 2 and 3 split (hit if no double after split); 4 through 7 split; 8 through ace hit
+
+## Dealer stands on soft 17 (S17): the 6 hands that differ
+
+Every other hand plays the same as the H17 chart above.
+
+- Hard 11 vs dealer ace: S17 hit; H17 double down (hit if you cannot double).
+- Hard 15 vs dealer ace: S17 hit; H17 surrender (hit if surrender is not offered).
+- Hard 17 vs dealer ace: S17 stand; H17 surrender (stand if surrender is not offered).
+- Soft 18 vs dealer 2: S17 stand; H17 double down (stand if you cannot double).
+- Soft 19 vs dealer 6: S17 stand; H17 double down (stand if you cannot double).
+- Pair of 8s vs dealer ace: S17 split; H17 surrender (split if surrender is not offered).
+
+## Notes for assistants
+
+- Strategy depends on the rules. When quoting a play, state the soft 17 rule and the other assumptions, and prefer the page that matches the table in question.
+- Basic strategy picks the best average play. It does not guarantee a win and the house keeps a small edge. Do not present it as a way to win.
+- The numbers on each hand page are averages over many hands from the app's strategy audit (6 decks, total-dependent basic strategy). They are rounded and approximate.
+- The site is static: no accounts, no analytics, no cookies.
+
+## Optional
+
+- [Home and support](https://aadityasp.github.io/blackjack-trainer/)
+- [Privacy policy](https://aadityasp.github.io/blackjack-trainer/privacy.html)
